@@ -1,0 +1,24 @@
+{
+  "name": "tudococo",
+  "author": {
+    "name": "Devestudio"
+  },
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "description": "",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "ejs": "^1.0.x",
+    "async": "^0.9.x",
+    "atob": "^1.1.x",
+    "express": "^4.8.x",
+    "compression": "^1.0.x",
+    "body-parser": "^1.7.x"
+  },
+  "engines": {
+    "node": "~0.10.x",
+    "npm": "~2.x.x"
+  }
+}
