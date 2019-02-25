@@ -1,339 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>DeveStudio | Software & HomePages</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/font-awesome.min.css" rel="stylesheet">
-    <link href="css/prettyPhoto.css" rel="stylesheet">
-    <link href="css/main.css" rel="stylesheet">
-    <!--[if lt IE 9]>
-    <script src="js/html5shiv.js"></script>
-    <script src="js/respond.min.js"></script>
-    <![endif]-->
-    <link rel="apple-touch-icon" sizes="57x57" href="images/favicons/apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="images/favicons/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="images/favicons/apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="images/favicons/apple-touch-icon-76x76.png">
-    <link rel="icon" type="image/png" href="images/favicons/favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="images/favicons/favicon-32x32.png" sizes="32x32">
-    <meta name="msapplication-TileColor" content="#ffffff">
-</head><!--/head-->
+    <!-- Character set configuration -->
+    <meta charset="UTF-8">
 
-<body data-spy="scroll" data-target="#navbar" data-offset="0">
-    <header id="header" role="banner">
-        <div class="container">
-            <div id="navbar" class="navbar navbar-default">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" href="index.html"></a>
+    <!-- Viewport configuration, scaling options -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <!-- Hide the browser UI -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <!-- MS tile icons -->
+    <meta name="msapplication-TileColor" content="#69f0ae">
+    <meta name="msapplication-TileImage" content="favicons/mstile-144x144.png">
+
+    <!-- Android toolbar color -->
+    <meta name="theme-color" content="#69f0ae">
+
+    <!-- Apple touch icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon-180x180.png">
+
+    <!-- Android touch icons -->
+    <link rel="icon" type="image/png" href="favicons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="favicons/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="favicons/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="favicons/favicon-16x16.png" sizes="16x16">
+
+    <!-- Web app manifest file -->
+    <link rel="manifest" href="favicons/manifest.json">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="libs/materialize/css/materialize.min.css">
+    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="styles/css/wata.css">
+
+    <!-- Site title -->
+    <title>DeveStudio | Software & Websites</title>
+</head>
+<body>
+    <div id="wrapper">
+
+        <!-- The preloader we see before the whole site is loaded -->
+        <div id="preloader" class="valign-wrapper">
+            <div class="preloader-wrapper big active">
+                <div class="spinner-layer spinner-blue-only actually-black">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
                 </div>
-                <div class="collapse navbar-collapse">
-                    <ul class="nav navbar-nav">
-                        <li class="active"><a href="#main-slider"><i class="icon-home"></i></a></li>
-                        <li><a href="#services">Serviços</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#about-us">Sobre Nós</a></li>
+            </div>
+        </div>
+
+        <!-- A status spinner to indicate that some process is going on -->
+        <div id="status">
+            <div class="preloader-wrapper small active">
+                <div class="spinner-layer spinner-blue-only actually-orange">
+                    <div class="circle-clipper left">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="gap-patch">
+                        <div class="circle"></div>
+                    </div>
+                    <div class="circle-clipper right">
+                        <div class="circle"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Navigation bar -->
+        <div class="navbar-fixed" id="nav">
+            <nav>
+                <div class="nav-wrapper">
+
+                    <!-- Site name -->
+                    <a href="#triangles" class="brand-logo"><img src="images/logo.png" alt="LOGO" /></a>
+
+                    <!-- Mobile menu button -->
+                    <a href="#" data-activates="mobile-menu" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+
+                    <!-- Static menu -->
+                    <ul class="right hide-on-med-and-down table-of-contents">
+                        <li><a href="#services">Sobre</a></li>
+                        <li><a href="#works">Portfólio</a></li>
+                        <li><a href="#about">Serviços</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+
+                    <!-- Mobile menu, make sure it is equal to the statis menu -->
+                    <ul class="side-nav" id="mobile-menu">
+                        <li><a href="#services">Sobre</a></li>
+                        <li><a href="#works">Portfólio</a></li>
+                        <li><a href="#about">Serviços</a></li>
                         <li><a href="#contact">Contato</a></li>
                     </ul>
                 </div>
-            </div>
+            </nav>
         </div>
-    </header><!--/#header-->
 
-    <section id="main-slider" class="carousel">
-        <div class="carousel-inner">
-            <div class="item active">
-                <div class="container">
-                    <div class="carousel-content">
-                        <h1>A Sua Empresa bem mais vista e posicionada no Mercado</h1>
-                        <p class="lead">Desenvolvemos aquilo que você precisa<br>com intuito de melhorar o seu marketing.</p>
-                    </div>
-                </div>
-            </div><!--/.item-->
-            <div class="item">
-                <div class="container">
-                    <div class="carousel-content">
-                        <h1>Desenvolvimento em HTML5,CSS3,Javascript</h1>
-                        <p class="lead">Utilizamos as ultimas tecnologias disponíves no mercado afim<br>de proporcionar a maior satisfação do cliente.</p>
-                    </div>
-                </div>
-            </div><!--/.item-->
-            <div class="item">
-                <div class="container">
-                    <div class="carousel-content">
-                        <h1>Desenvolvimento com NodeJS e Banco NOSQL</h1>
-                        <p class="lead">As ferramentas ideais para um desenvolvimento focado em retornos <br>de alto desempenho e qualidade.</p>
-                    </div>
-                </div>
-            </div><!--/.item-->
-        </div><!--/.carousel-inner-->
-        <a class="prev" href="#main-slider" data-slide="prev"><i class="icon-angle-left"></i></a>
-        <a class="next" href="#main-slider" data-slide="next"><i class="icon-angle-right"></i></a>
-    </section><!--/#main-slider-->
-
-    <section id="services">
-        <div class="container">
-            <div class="box first">
-                <div class="row">
-                    <div class="col-md-4 col-sm-6">
-                        <div class="center">
-                            <i class="icon-apple icon-md icon-color1"></i>
-                            <h4>Desenvolvimento para iOS </h4>
-                            <p>Desenvolvemos aplicativos e sistemas mobile afim de atender usuários de IPhone, IPAD, Mac.</p>
-                        </div>
-                    </div><!--/.col-md-4-->
-                    <div class="col-md-4 col-sm-6">
-                        <div class="center">
-                            <i class="icon-android icon-md icon-color2"></i>
-                            <h4>Desenvolvimento para  Android</h4>
-                            <p>Sistemas Mobile para o sistema operacional mobile com maior presença no mercado atual.</p>
-                        </div>
-                    </div><!--/.col-md-4-->
-                    <div class="col-md-4 col-sm-6">
-                        <div class="center">
-                            <i class="icon-windows icon-md icon-color3"></i>
-                            <h4>Desenvolvimento para  Windows Phone</h4>
-                            <p>Na atualidade vemos uma grande minoria de aplicativos e sistemas mobile para este que possui grandes oportunidades para brigar de igual para igual com os grandes.</p>
-                        </div>
-                    </div><!--/.col-md-4-->
-                    <div class="col-md-4 col-sm-6">
-                        <div class="center">
-                            <i class="icon-html5 icon-md icon-color4"></i>
-                            <h4>Desenvolvimento em HTML5</h4>
-                            <p>HomePages e Softwares Web com HTML5, possuem uma tendência a serem mais bem vistos pelas pessoas, pela sua maior interatividade.</p>
-                        </div>
-                    </div><!--/.col-md-4-->
-                    <div class="col-md-4 col-sm-6">
-                        <div class="center">
-                            <i class="icon-css3 icon-md icon-color5"></i>
-                            <h4>Desenvolvimento em CSS3</h4>
-                            <p>Tecnologia que junto com o HTML5 desponta para uma melhor satisfação e desempenho visual do sistema ou homepage.</p>
-                        </div>
-                    </div><!--/.col-md-4-->
-                    <div class="col-md-4 col-sm-6">
-                        <div class="center">
-                            <i class="icon-thumbs-up icon-md icon-color6"></i>
-                            <h4>Páginas com Design Responsivo</h4>
-                            <p>Atualmente uma pagina totalmente responsiva se adapta a vários tipos de dispositivos, computador, celulares, tabletes, sem a necessidade de se desenvolver mais de uma aplicação ou homepage específica.</p>
-                        </div>
-                    </div><!--/.col-md-4-->
-                </div><!--/.row-->
-            </div><!--/.box-->
-        </div><!--/.container-->
-    </section><!--/#services-->
-
-    <section id="portfolio">
-        <div class="container">
-            <div class="box">
-                <div class="center">
-                    <h2>Portfolio</h2>
-                    <!--<p class="lead">Alguns dos trabalhos que levam o nome da DeveStudio.</p>-->
-                </div><!--/.center-->
-                <ul class="portfolio-filter">
-                    <li><a class="btn btn-primary active" href="#" data-filter="*">Todos</a></li>
-                    <li><a class="btn btn-primary" href="#" data-filter=".softwares">Softwares</a></li>
-                    <li><a class="btn btn-primary" href="#" data-filter=".homepages">HomePages</a></li>
-                </ul><!--/#portfolio-filter-->
-                <ul class="portfolio-items col-4">
-                    <li class="portfolio-item homepages">
-                        <div class="item-inner">
-                            <div class="portfolio-image">
-                                <img src="images/portfolio/thumb/item8.jpg" alt="">
-                                <div class="overlay">
-                                    <a class="preview btn btn-danger" title="Modelo de Portal para a empresa JC de Paula e Nakata Escritorio de Contabilidade - 2012" href="images/portfolio/full/item8.jpg"><i class="icon-eye-open"></i></a>
-                                </div>
-                            </div>
-                            <h5>Portal em HTML5 Onepage</h5>
-                        </div>
-                    </li><!--/.portfolio-item-->
-                </ul>
-            </div><!--/.box-->
-        </div><!--/.container-->
-    </section><!--/#portfolio-->
-
-    <section id="logos">
-        <div class="container">
-            <div class="box">
-                <div class="center">
-                    <h2>Logos,Banners e Panfletos</h2>
-                    <p class="lead">Em breve estaremos disponibilizando para visualização alguns modelos elaborados por nós</p>
-                </div><!--/.center-->
-            </div><!--/.box-->
-        </div><!--/.container-->
-    </section><!--/#portfolio-->
-
-    <section id="about-us">
-        <div class="container">
-            <div class="box" style="background-color: #f3f3f3 !important">
-                <div class="center">
-                    <h2>Sobre a Empresa</h2>
-                    <p class="lead">A DeveStudio esta entrando agora no mercado de desenvolvimento de Softwares e HomePages, porem conta com profissionais
-                        capacitados e com toda disposição em desenvolver as soluções que melhor atender a necessidade do cliente.</p>
-                    <p class="lead">As tecnologias utilizadas pela equipe é a mais atualizada no mercado, e conta com diversos plugins e frameworks capazes de
-                        auxiliar num desenvolvimento mais rápido e de resposta mais imediata para o cliente.</p>
-                    <p class="lead">Os softwares e homepages desenvolvidos pela DeveStudio estão focados nas necessidades dos clientes, e uma solução que será
-                        eficaz para o mesmo, tornando o trabalho mais facil.</p>
-                </div>
-                <div class="gap"></div>
-                <div id="team-scroller" class="carousel scale" style="display: none">
-                    <div class="carousel-inner">
-                        <div class="item active">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <div class="member">
-                                        <p><img class="img-responsive img-thumbnail img-circle" src="images/team1.jpg" alt="" ></p>
-                                        <h3>Agnes Smith<small class="designation">CEO &amp; Founder</small></h3>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="member">
-                                        <p><img class="img-responsive img-thumbnail img-circle" src="images/team2.jpg" alt="" ></p>
-                                        <h3>Donald Ford<small class="designation">Senior Vice President</small></h3>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="member">
-                                        <p><img class="img-responsive img-thumbnail img-circle" src="images/team3.jpg" alt="" ></p>
-                                        <h3>Karen Richardson<small class="designation">Assitant Vice President</small></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item">
-                            <div class="row">
-                                <div class="col-sm-4">
-                                    <div class="member">
-                                        <p><img class="img-responsive img-thumbnail img-circle" src="images/team3.jpg" alt="" ></p>
-                                        <h3>David Robbins<small class="designation">Co-Founder</small></h3>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="member">
-                                        <p><img class="img-responsive img-thumbnail img-circle" src="images/team1.jpg" alt="" ></p>
-                                        <h3>Philip Mejia<small class="designation">Marketing Manager</small></h3>
-                                    </div>
-                                </div>
-                                <div class="col-sm-4">
-                                    <div class="member">
-                                        <p><img class="img-responsive img-thumbnail img-circle" src="images/team2.jpg" alt="" ></p>
-                                        <h3>Charles Erickson<small class="designation">Support Manager</small></h3>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="left-arrow" href="#team-scroller" data-slide="prev">
-                        <i class="icon-angle-left icon-4x"></i>
-                    </a>
-                    <a class="right-arrow" href="#team-scroller" data-slide="next">
-                        <i class="icon-angle-right icon-4x"></i>
-                    </a>
-                </div><!--/.carousel-->
-            </div><!--/.box-->
-        </div><!--/.container-->
-    </section><!--/#about-us-->
-
-    <section id="contact">
-        <div class="container">
-            <div class="box last">
-                <div class="row">
-                    <div class="col-sm-6">
-                        <h1>Nosso Contato</h1>
-                        <p>Entre em contato conosco para maiores informações, preços, orçamentos, disponibilidades no email <strong>contato@devestudio.com.br</strong></p>
-                        <div class="status alert alert-success" style="display: none"></div>
-                        <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php" role="form">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input name="name" id="name" type="text" class="form-control" required="required" placeholder="Seu Nome">
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="form-group">
-                                        <input name="email" id="email" type="text" class="form-control" required="required" placeholder="Seu Email">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-sm-12">
-                                    <div class="form-group">
-                                        <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Sua Mensagem"></textarea>
-                                    </div>
-                                    <div class="form-group">
-                                        <button type="submit" class="btn btn-lg">Enviar Mensagem</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div><!--/.col-sm-6-->
-                    <div class="col-sm-6">
-                        <h1>Nosso Endereço</h1>
+        <!-- Triangles section -->
+        <div id="triangles" class="scrollspy">
+            <div id="output">
+                <div class="h1-wrapper valign-wrapper">
+                    <div class="container">
                         <div class="row">
-                            <div class="col-md-12">
-                                <address>
-                                    <strong>DeveStudio - Software & HomePages</strong><br>
-                                    Rua José Pereira dos Santos Filho, N420, Guaratinguetá, São Paulo<br>
-                                    <abbr title="Phone">Telefone:</abbr> (12) 99622-8401
-                                </address>
+                            <div class="col s12">
+                                <!-- Your company's slogan, feel free to add more tags here -->
+                                <h1>Nós realmente trabalhamos duro para facilitar a sua vida.</h1>
                             </div>
-                            <!--<div class="col-md-6">-->
-                                <!--<address>-->
-                                    <!--<strong>Twitter, Inc.</strong><br>-->
-                                    <!--795 Folsom Ave, Suite 600<br>-->
-                                    <!--San Francisco, CA 94107<br>-->
-                                    <!--<abbr title="Phone">P:</abbr> (123) 456-7890-->
-                                <!--</address>-->
-                            <!--</div>-->
                         </div>
-                        <!--<h1>Connect with us</h1>-->
-                        <!--<div class="row">-->
-                            <!--<div class="col-md-6">-->
-                                <!--<ul class="social">-->
-                                    <!--<li><a href="#"><i class="icon-facebook icon-social"></i> Facebook</a></li>-->
-                                    <!--<li><a href="#"><i class="icon-google-plus icon-social"></i> Google Plus</a></li>-->
-                                    <!--<li><a href="#"><i class="icon-pinterest icon-social"></i> Pinterest</a></li>-->
-                                <!--</ul>-->
-                            <!--</div>-->
-                            <!--<div class="col-md-6">-->
-                                <!--<ul class="social">-->
-                                    <!--<li><a href="#"><i class="icon-linkedin icon-social"></i> Linkedin</a></li>-->
-                                    <!--<li><a href="#"><i class="icon-twitter icon-social"></i> Twitter</a></li>-->
-                                    <!--<li><a href="#"><i class="icon-youtube icon-social"></i> Youtube</a></li>-->
-                                <!--</ul>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    </div><!--/.col-sm-6-->
-                </div><!--/.row-->
-            </div><!--/.box-->
-        </div><!--/.container-->
-    </section><!--/#contact-->
-
-    <footer id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-6">
-                    <a>&copy; 2014 DeveStudio - Softwate & HomePages</a>. All Rights Reserved.
+                    </div>
+                    <!-- Action button -->
+                    <a class="btn-floating btn-large waves-effect waves-dark orange darken-4" id="explore">
+                        <i class="mdi-navigation-arrow-forward white-text text-darken-4"></i>
+                    </a>
                 </div>
-                <!--<div class="col-sm-6">-->
-                    <!--<img class="pull-right" src="images/shapebootstrap.png" alt="ShapeBootstrap" title="ShapeBootstrap">-->
-                <!--</div>-->
             </div>
         </div>
-    </footer><!--/#footer-->
 
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/jquery.isotope.min.js"></script>
-    <script src="js/jquery.prettyPhoto.js"></script>
-    <script src="js/main.js"></script>
+        <!-- Services section -->
+        <div class="section scrollspy" id="services">
+            <div class="container">
+                <div class="row">
+                    <h2>Nós somos DeveStudio</h2>
+                    <div class="col s12 m10 offset-m1 l8 offset-l2">
+                        <p class="flow-text center-align">
+                            Somos uma empresa focada na elaboração de produtos especiais e precisos que realmente ajudam em sua vida cotidiana. Sinta-se à vontade para conferir nossos serviços e explorar nosso portfólio.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Row with service icons -->
+                <div class="row services">
+                    <div class="col s12 l4">
+                        <i class="fa fa-5x fa-paint-brush animated-color"></i>
+                        <div class="divider"></div>
+                        <h5>Design Criativo</h5>
+                        <p>Inspirado nas últimas tendências do Material design, utilizando tecnologias de ponta para um visual moderno e renovado.</p>
+                    </div>
+                    <div class="col s12 l4">
+                        <i class="fa fa-5x fa-desktop animated-color"></i>
+                        <div class="divider"></div>
+                        <h5>Layouts Adaptáveis</h5>
+                        <p>Projetado com o conceito mobile-first, a grade é dimensionada para se adequar aos dispositivos. O conteúdo sempre parece bom e equilibrado.</p>
+                    </div>
+                    <div class="col s12 l4">
+                        <i class="fa fa-5x fa-code animated-color"></i>
+                        <div class="divider"></div>
+                        <h5>Código Minucioso</h5>
+                        <p>Lindo por fora e inteligente por dentro. Nosso código é limpo, extremamente legível e sem problemas para modificar ou manter.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="divider"></div>
+        </div>
+
+        <!-- Works section -->
+        <div class="section scrollspy" id="works">
+            <div class="container">
+                <div class="row">
+                    <h2>Nossos trabalhos</h2>
+                    <div class="col s12 m10 offset-m1 l8 offset-l2">
+                        <p class="flow-text center-align">
+                            Apresentamos alguns dos projetos! Devido as cláusulas de alguns contratos, não podemos expor todos aqui!
+                        </p>
+                    </div>
+                    <br><br>
+                    <!-- Category filter buttons -->
+                    <div class="filter-options col s12 m12 l12">
+                        <a class="btn-flat waves-orange-accent waves-effect active" id="all" data-group="all">Todos</a>
+                        <a class="btn-flat waves-orange-accent waves-effect" data-group="material">Sistemas</a>
+                        <a class="btn-flat waves-orange-accent waves-effect" data-group="food">Websites</a>
+                        <a class="btn-flat waves-orange-accent waves-effect" data-group="digital">Visual Gráfico</a>
+                    </div>
+                </div>
+            </div>
+            <div class="wide-container">
+                <!-- Shuffle grid -->
+                <div id="shuffle-grid" class="row">
+                    <a href="ajax/works/heisenberg-ice-cream.html" class="col s12 m6 l4 picture-item ajax-link" data-groups='["food"]'>
+                        <img src="images/works/ice-cream.png" class="responsive-img" alt="Ice cream">
+                        <h5>Heisenberg ice-cream</h5>
+                    </a>
+                    <a href="ajax/works/a-joe-book-cover.html" class="col s12 m6 l4 picture-item ajax-link" data-groups='["material", "digital"]'>
+                        <img src="images/works/books.png" class="responsive-img" alt="Book cover">
+                        <h5>Gerenciamento de Ordem de Serviços</h5>
+                    </a>
+                    <a href="ajax/works/wooden-series.html" class="col s12 m6 l4 picture-item ajax-link" data-groups='["digital"]'>
+                        <img src="images/works/clock.png" class="responsive-img" alt="Wooden clock">
+                        <h5>Wooden series</h5>
+                    </a>
+                    <a href="ajax/works/rubiks-triangle.html" class="col s12 m6 l4 picture-item ajax-link" data-groups='["digital", "material", "digital"]'>
+                        <img src="images/works/object.png" class="responsive-img" alt="Rubik's triangle">
+                        <h5>Gestão e impressão de certificados</h5>
+                    </a>
+                    <a href="ajax/works/old-fashioned.html" class="col s12 m6 l4 picture-item ajax-link" data-groups='["food"]'>
+                        <img src="images/works/tape.png" class="responsive-img" alt="Tape">
+                        <h5>Old fashioned</h5>
+                    </a>
+                    <a href="ajax/works/parks-and-rec.html" class="col s12 m6 l4 picture-item ajax-link" data-groups='["food"]'>
+                        <img src="images/works/trees.png" class="responsive-img" alt="Trees">
+                        <h5>Parks and recreation</h5>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Get started section -->
+        <div class="section grey-section" id="get-started">
+            <div class="container">
+                <div class="row">
+                    <h2>GOSTOU DO QUE ESTÁ VENDO?</h2>
+                    <div class="col s12 m10 offset-m1 l8 offset-l2">
+                        <p class="flow-text center-align">
+                            Vamos começar a construir seu próximo projeto juntos. Entre em contato agora mesmo.
+                        </p>
+                        <p class="center-align">
+                            <a class="waves-effect waves-light btn-large orange darken-4 white-text text-darken-4" href="#contact">
+                                <i class="fa fa-rocket left"></i>iniciar
+                            </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- About section -->
+        <div class="section scrollspy" id="about">
+            <div class="container">
+                <div class="row">
+                    <h2>A DeveStudio</h2>
+                    <div class="col s12 m10 offset-m1 l8 offset-l2">
+                        <p class="flow-text center-align">
+                            Trabalhando diretamente com negócios digitais! Vamos de dar toda consultoria e ajudar a colocar sua marca na web.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="wide-container">
+                <div class="row team">
+                    <div class="col s12 m6">
+                        <div class="description-ball"></div>
+                        <div class="description center-align">
+                            <div class="row h4-row">
+                                <h4 class="white-text">
+                                    Websites<br>
+                                    <small>Desenvolvemos sites para qualquer qualquer tipo de negócio ou indústrias.</small>
+                                </h4>
+                            </div>
+                        </div>
+                        <img src="images/team/121H.jpg" class="responsive-img" alt="Ann Perkins">
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="description-ball"></div>
+                        <div class="description center-align">
+                            <div class="row h4-row">
+                                <h4 class="white-text">
+                                    E-commerce<br>
+                                    <small>Vamos alavancar suas vendas? Seu negócio online 24 horas por dia.</small>
+                                </h4>
+                            </div>
+                        </div>
+                        <img src="images/team/166H.jpg" class="responsive-img" alt="Dick Cleverley">
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="description-ball"></div>
+                        <div class="description center-align">
+                            <div class="row h4-row">
+                                <h4 class="white-text">
+                                    Aplicativos<br>
+                                    <small>Ter um aplicativo não é coisa apenas para grandes empresas.</small>
+                                </h4>
+                            </div>                            
+                        </div>
+                        <img src="images/team/93H.jpg" class="responsive-img" alt="Jonathan Edgar Doe">
+                    </div>
+                    <div class="col s12 m6">
+                        <div class="description-ball"></div>
+                        <div class="description center-align">
+                            <div class="row h4-row">
+                                <h4 class="white-text">
+                                    Sistemas Gerenciais<br>
+                                    <small>Soluções que facilitam o controle e ajudam nas tomadas de decisões.</small>
+                                </h4>
+                            </div>
+                        </div>
+                        <img src="images/team/172H.jpg" class="responsive-img" alt="Eva Orange">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="divider"></div>
+        </div>
+
+        <!-- Contact form section -->
+        <div class="section scrollspy" id="contact">
+            <div class="container">
+                <div class="row">
+                    <h2>Fale Conosco</h2>
+                    <div class="col s12 m10 offset-m1 l8 offset-l2">
+                        <p class="flow-text center-align">
+                            Deixe-nos saber se você quer trabalhar em seu projeto conosco ou apenas soltar uma linha para dizer olá. Estamos sempre felizes em receber suas mensagens.
+                        </p>
+                        <p class="right-align">
+                            <i class="fa fa-info-circle"></i> O sobrenome não é obrigatório.
+                        </p>
+                    </div>
+                </div>
+                <div class="row">
+                    <form class="col s12 m12 l8 offset-l2" action="php/mailer.php" id="contact-form" novalidate>
+                        <!-- This field helps us avoid spam bots, don't remove it -->
+                        <div class="cant-touch-this">
+                            <input type="text" name="hammertime" tabindex="-1" value="">
+                        </div>
+                        <!-- End of anti-spam field -->
+                        <div class="row">
+                            <div class="input-field col s6">
+                                <input id="first-name" name="first-name" type="text" class="required">
+                                <label for="first-name">Nome</label>
+                            </div>
+                            <div class="input-field col s6">
+                                <input id="last-name" name="last-name" type="text">
+                                <label for="last-name">Sobrenome</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="email" name="email" type="email" class="required">
+                                <label for="email">E-mail</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea id="message" name="message" class="materialize-textarea required"></textarea>
+                                <label for="message">Mensagem</label>
+                            </div>
+                        </div>
+                        <div class="center-align">
+                            <button type="submit" name="send" class="btn-large disabled">
+                                Enviar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>            
+        </div>
+
+        <!-- Footer section -->
+        <footer class="page-footer">
+            <div class="footer-copyright">
+                <div class="container">
+                    © 2014 DevStudio | (12) 99622-8401 | Guaratinguetá-SP
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- Ajax box container, waiting for its turn -->
+    <div id="ajax-box" class="translate"></div>
+
+    <!-- Scripts -->    
+    <script src="scripts/config.js"></script>
+    <script src="scripts/build.js"></script>
 </body>
 </html>
